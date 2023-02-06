@@ -1,24 +1,20 @@
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
-class EqualFloat {
+public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter first floating-point number: ");
-        float num1 = sc.nextFloat();
-        System.out.print("Enter second floating-point number: ");
-        float num2 = sc.nextFloat();
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        double num1 = scan.nextDouble();
+        System.out.print("Enter second number: ");
+        double num2 = scan.nextDouble();
 
-        DecimalFormat df = new DecimalFormat("#.###");
-        df.setRoundingMode(java.math.RoundingMode.FLOOR);
+        int num1Int = (int) (num1 * 1000);
+        int num2Int = (int) (num2 * 1000);
 
-        String strNum1 = df.format(num1);
-        String strNum2 = df.format(num2);
-
-        if (strNum1.equals(strNum2)) {
-            System.out.println("True");
+        if (num1Int == num2Int) {
+            System.out.println("The numbers are equal up to three decimal places.");
         } else {
-            System.out.println("False");
+            System.out.println("The numbers are not equal up to three decimal places.");
         }
     }
 }
