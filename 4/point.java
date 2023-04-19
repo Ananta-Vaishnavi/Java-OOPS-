@@ -13,3 +13,13 @@ public class Point {
         return Math.sqrt(dx * dx + dy * dy);
     }
 }
+
+
+public class Main {
+    public static void main(String[] args) {
+        Point p1 = new Point(1.0, 2.0);
+        Point p2 = new Point(4.0, 6.0);
+        double dist = p1.distance(p2);
+        System.out.println("Distance between p1 and p2 is " + dist);
+    }
+}
